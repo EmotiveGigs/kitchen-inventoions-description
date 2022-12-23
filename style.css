@@ -1,0 +1,480 @@
+body {
+    color: #666666;
+    font-size: 13px;
+    font-family: Open Sans, georgia, serif;
+    background-color: #f0f0f0;	
+}
+.logo_row {
+	width:100%
+	margin:auto;
+	background-color:#f0f0f0;
+	
+  }
+.page {
+    background-color: white;
+}
+.cl {
+    font-size: 0;
+    line-height: 0;
+    clear: both;
+    display: block;
+    height: 0;
+}
+.welcome {
+    margin-top: 15px;
+}
+p.welcome-msg, p.phone {
+    color: #428bca;
+    float: right;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0;
+    text-align: right;
+}
+p.welcome-msg {
+    color: #666666;
+}
+/*MEGAMENU*/
+.megamenu {
+    list-style-type: none;
+    padding-left: 0;
+    border-bottom: 4px solid #292929;
+}
+.megamenu li {
+    border-right: 2px solid #DEDEDE;
+    line-height: 43px;
+    display: block;
+    height: 43px;
+    padding: 0;
+    text-align: left;
+    background-color: #656565;
+    float: left;
+    transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+    -webkit-transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+}
+.megamenu li a, .megamenu li a:link, .megamenu li a:visited {
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    display: block;
+}
+.megamenu li:hover {
+    background: #428bca;
+    color: #ffffff;
+    display: block;
+}
+/*CATEGORIES*/
+.categories, .product_box {
+    padding: 8px;
+    background: none repeat scroll 0 0 #f2f2f2;
+    margin: 0 0 12px;
+}
+.categories p{
+    background-color: #46454d;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 0;
+}
+.categories > ul > li > a, .categories > ul > li > a:link {
+    color: #46454d;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+.categories > ul {
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 0;
+}
+.categories > ul > li {
+    cursor: pointer;
+    color: #46454d;
+    margin-bottom: 0;
+    background-color: #fafafa;
+    padding:5px 10px;
+    font-size: 14px;
+}
+/*DROP-DOWN CATEGORIES*/
+.inner_dropdown li {
+    padding: 5px;
+    padding-left: 20px;
+}
+.inner_dropdown li a{
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+    .inner_dropdown li a i {
+        color: black;
+        font-weight: normal;
+        padding-right: 3px;
+    }
+.dropdown_cat:hover > .third_level {
+        color: #46454d;
+        margin-bottom: 0;
+        background-color: #fafafa;
+    }
+.dropdown_cat:hover > .inner_dropdown  {
+    margin: 0 -10px -5px -10px;
+    height: 100%;
+    opacity:1;
+}
+.inner_dropdown .dropdown_cat {
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+.inner_dropdown i {
+    font-size: 6px;
+}
+.inner_dropdown {
+    /*background-color: #c2c0c0;*/
+    opacity:0;
+    clear: both;
+    height: 0;
+    padding: 0 8px;
+    overflow: hidden;
+    -webkit-transition: all .3s ease .15s;
+    -moz-transition: all .3s ease .15s;
+    -o-transition: all .3s ease .15s;
+    -ms-transition: all .3s ease .15s;
+    transition: all .3s ease .15s;
+}
+.third_level {
+    border-bottom: 4px solid #c2c0c0;
+}
+.block-title {
+    background: none repeat scroll 0 0 #505050;
+    padding: 8px 10px;
+}
+.block-title span {
+    font-size: 85%;
+    line-height: normal;
+    outline: none;
+    color: #ffffff !important;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.fa-circle {
+    color: #428bca;
+    font-size: 8px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+/*PRODUCT*/
+
+.product_info {
+    width: 54%;
+    margin-top: 50px;
+}
+.product_title, .product_price {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+}
+.product_price {
+    margin-top:  20px;
+    display: none;
+}
+.product {
+    background-color: white;
+    padding: 10px;
+
+}
+.product > div {
+    display: inline-block;
+    vertical-align: top;
+}
+/*THUMBNAIL GALLERY*/
+.slider {
+	/*Same as width of the large image*/
+	position: relative;
+	/*Instead of height we will use padding*/
+	padding-top: 400px; /*That helps bring the labels down*/
+	/*Lets add a shadow*/
+    width: 45%;
+}
+
+/*Last thing remaining is to add transitions*/
+.slider>img{
+    position:absolute;
+    left:0;
+    right:0;
+    top: 0;
+    bottom:15px;
+    margin:0 auto;
+    display:block;
+	transition: all 0.5s;
+    max-height: 270px;
+    width: auto;
+}
+
+.slider input[name='slide_switch'] {
+	display: none;
+}
+
+.slider label {
+	/*Lets add some spacing for the thumbnails*/
+    margin: 6px 0 0 4px;
+
+	
+	float: left;
+	cursor: pointer;
+	transition: all 0.5s;
+	
+	/*Default style = low opacity*/
+	opacity: 0.6;
+}
+
+.slider label img{
+    /*border: 3px solid #999;*/
+    width: auto;
+    height: 60px;
+	display: block;
+}
+.slider input[name='slide_switch']:checked + label {
+	border-color: #666;
+	opacity: 1;
+}
+.slider input[name='slide_switch'] ~ img {
+    display: none;
+	/*opacity: 0;*/
+	transform: scale(1.1);
+}
+.slider input[name='slide_switch']:checked + label + img, .slider input[name='slide_switch']:checked + label + style + img {
+    max-height: 355px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    display:block;
+    opacity: 1;
+    transform: scale(1);
+}
+/*TABS*/
+.tabs {
+    width: 100%;
+    float: none;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.tabs:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.tabs input[type=radio] {
+    display:none;
+}
+
+.tabs label {
+    margin-bottom: 0px;
+    display: block;
+    float: left;
+    color: white;
+    font-weight: normal;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-right: 1px solid #b4b2b2;
+    background-color: #c4c2c2;
+    margin-right: 4px;
+}
+ 
+.tabs label span {
+    display: none;
+}
+
+.tabs label i {
+    margin-right: 2px;
+}
+.tab-content {
+    display: none;
+    width: 100%;
+    float: left;
+    padding: 10px;
+    /*background-color:#ffffff;*/
+    background-color: white;
+    font-size: 14px;
+    border-top: 1px solid #c4c2c2;
+}
+.secondary {
+    height: 300px;
+    overflow: hidden;
+    overflow-y: initial;
+}
+.tabs [id^="tab"]:checked + label {
+    background-color: #418bca;
+    z-index: 2;
+    color: white;
+    /*-webkit-box-shadow: inset 0 2px 0 #ed223e;*/
+    position: relative;
+}
+
+#tab1:checked ~ #tab-content1, #tab2:checked ~ #tab-content2, #tab3:checked ~ #tab-content3, #tab4:checked ~ #tab-content4, #tab5:checked ~ #tab-content5, #tab6:checked ~ #tab-content6, #tab7:checked ~ #tab-content7, #tab8:checked ~ #tab-content8, #tab9:checked ~ #tab-content9, #tab10:checked ~ #tab-content10 {
+    display: block;
+}
+#tab-content1 {
+    font-size: 12px;
+    font-family: Verdana, sans-serif;
+}
+.x-tins ul {
+    padding: 0 0 15px;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Open Sans", Arial, Tahoma, Sans-serif;
+}
+.x-tins ul li {
+    background: transparent url(../images/x-tbul-blue.png) 0 0 no-repeat;
+    padding: 0 0 5px 15px;
+}
+.x-tins h5 {
+    color: #0070C6;
+    text-align: left;
+    font: bold 13px/18px "Open Sans", Arial, Tahoma, Sans-serif;
+    margin: 0;
+    padding: 5px 0 10px;
+}
+/*BRANDS*/
+.brands h2 {
+    font-size: 24px;
+    border-bottom: 8px solid #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+}
+.brands {
+    margin-bottom: 20px;
+}
+.x-main-dvdr {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #CCC;
+    margin: 5px auto 10px;
+}
+.block {
+    background: none repeat scroll 0 0 #f2f2f2;
+    margin: 0 0 12px;
+    padding: 8px;
+}
+.footer_menu {
+    padding-left: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+.footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.footer_menu li {
+    border-right: 1px solid #505050;
+    display: block;
+    float: left;
+    padding: 0 10px;
+}
+.footer_menu li:first-child {
+    padding-left: 0;
+}
+.footer_menu li:last-child {
+    border-right: none;
+}
+.footer_menu li a, .footer_menu li a:link,.footer_menu li a:visited {
+    color: #505050;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-size: 85%;
+    display: block;
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 732px) and (orientation : landscape) {
+    .logo_row div a{
+        display: block;
+        text-align: center;
+    }
+    p.welcome-msg, p.phone {
+        float: none;
+        text-align: center;
+    }
+    .block {
+        width: 32.8%;
+        display: inline-block;
+        font-size: 95%;
+    }
+    .product_info {
+        margin-top: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 450px) {
+}
+
+@media (max-width: 360px) {
+    .slider input[name='slide_switch']:checked + label + img, .slider input[name='slide_switch']:checked + label + style + img {
+        max-height: 390px;
+    }
+    .copy {
+        text-align: center;
+    }
+    .footer_menu li {
+        width: 100%;
+        border-right: none;
+        text-align: center;
+    }
+    .tabs label {
+        width: 100%;
+    }
+    .product_info {
+        width: 100%;
+    }
+    .slider {
+        width: 100%;
+    }
+    .block {
+        display: none;
+    }
+    .megamenu li {
+        width: 100%;
+    }
+    .logo_row div a{
+        display: block;
+        text-align: center;
+    }
+    .logo_row img {
+        margin: 0 auto;
+    }
+    p.welcome-msg, p.phone {
+        float: none;
+        text-align: center;
+		font-size:10px;
+    }
+	
+	.welcome-msg {
+      font-size:10px  
+	 }
+}
+
+@media (max-width: 340px) {
+}
